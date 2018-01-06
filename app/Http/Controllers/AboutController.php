@@ -7,15 +7,19 @@
  */
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\about;
-use Illuminate\Support\Facades\DB;
-use Symfony\Component\Console\Helper\Table;
+use App\About;
 
 class AboutController extends Controller
 {
     public function index ()
     {
-        return view('about/index');
+        $data = array();
+        $data['uid'] = AuthController::getUid();
+        $data['username'] = InfoController::getUsername();
+        $data['type'] = AuthController::getType();
+        $data['about'] = About::orderBy('wid','desc')
+            ->first();
+        //return $data;
+        return view('about/index', ['data' => $data]);
     }
 }
