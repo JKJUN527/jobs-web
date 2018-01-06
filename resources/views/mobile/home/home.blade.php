@@ -86,11 +86,11 @@
     </main>
     <footer class="esh-tabs-container" id="esh-footer">
         <div class="esh-tabs" id="esh-tabs">
-            <a class="esh-tabs__tab is-active" id="esh-tab-home">
+            <a class="esh-tabs__tab is-active" id="esh-tab-home" href="/m/index">
                 <i class="material-icons">home</i>
                 <span class="esh-tabs__text">首页</span>
             </a>
-            <a class="esh-tabs__tab" id="esh-tab-job">
+            <a class="esh-tabs__tab" id="esh-tab-job" href="/m/position/advanceSearch">
                 <i class="material-icons">view_list</i>
                 <span class="esh-tabs__text">职位</span>
             </a>
@@ -108,7 +108,7 @@
 
 <script src="{{asset('mobile/js/lib/jquery-3.2.1.min.js')}}"></script>
 <script src="{{asset('mobile/js/lib/material.min.js')}}"></script>
-<script src="{{asset('mobile/js/utils/utils.js')}}"></script>
+{{--<script src="{{asset('mobile/js/utils/utils.js')}}"></script>--}}
 <script src="{{asset('mobile/js/home/home.js')}}"></script>
 </body>
 </html>

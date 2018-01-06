@@ -232,10 +232,10 @@ Route::any('resumesendmail', ['uses' => 'DeliveredController@sendresumetomail'])
 Route::any('/m/index', ['uses' => 'mobile\HomeController@index']);//完成
 
 //个人信息
-Route::get('account/edit', ['uses' => 'mobile\InfoController@index']);
+Route::get('/m/account/edit', ['uses' => 'mobile\InfoController@index']);
 
 //职位
-Route::any('position/advanceSearch', ['uses' => 'mobile\PositionController@advanceIndex']);
+Route::any('/m/position/advanceSearch', ['uses' => 'mobile\PositionController@advanceIndex']);
 
 
 /*

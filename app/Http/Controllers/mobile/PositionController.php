@@ -824,8 +824,8 @@ class PositionController extends Controller {
         $data['result'] = $this->advanceSearch($request);
 
         $data['condition'] = $request->all();
-//        return $data;
-        return view('position/advanceSearch', ['data' => $data]);
+        return $data;
+        return view('mobile/job/job', ['data' => $data]);
     }
 
     //职位详情页，查看某公司全部职位信息。
