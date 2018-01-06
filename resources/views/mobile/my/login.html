@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css"/>
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+    <title>登录</title>
+</head>
+
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout esh-no-login">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+        <div class="mdl-layout__header-row esh-layout__header-row">
+            <span class="mdl-layout__title esh-layout__title" id="esh-headline">电竞猎人</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" id="esh-content">
+        <div class="mdl-card">
+            <div class="mdl-card__title">
+                <img src="../../styles/default/images/user-logo.png" class="esh-login-logo">
+            </div>
+            <div class="mdl-card__actions">
+                <form id="loginForm" class="esh-form__container">
+                    <span id="errorMsg" class="esh-msg__error"></span>
+                    <div class="esh-form-group">
+                        <div class="esh-form-input">
+                            <input type="text" class="form-ctrl" id="account" placeholder="请输入手机号或邮箱……"/>
+                        </div >
+                        <div class="esh-form-input esh-last">
+                            <input type="password" class="form-ctrl" placeholder="请输入密码…" id="pwd"/>
+                        </div>
+                    </div>
+                    <div class="esh-form-footer">
+                        <div class="esh-form-register">
+                            <a href="../my/register.html">立即注册&nbsp;&nbsp;</a>
+                        </div>
+                        <div class="esh-form-forget"><a href="rebackPwd.html">忘记密码？</a></div>
+                        <div class="esh-form-sure">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    >登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script src="../../plugins/sweetalert/sweetalert.min.js"></script>
+<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../js/lib/material.min.js"></script>
+<script src="../../js/utils/utils.js"></script>
+<script src="../../js/my/login.js"></script>
+</body>
+</html>

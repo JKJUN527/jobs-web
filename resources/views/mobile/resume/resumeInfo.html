@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>简历详情</title>
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css"/>
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+</head>
+<body>
+    <!--编辑、添加页面共用resumeInfo.html-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout">
+        <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+            <div class="mdl-layout-icon esh-layout-icon--left esh-page--back esh-js-page--back"><i class="material-icons">navigate_before</i></div>
+            <div class="mdl-layout__header-row esh-layout__header-row esh-layout__header-row--has-button">
+
+                <span class="mdl-layout__title esh-layout__title esh-edit-title-name" >
+                    <!--{{$data['resume']->resume_name}}-->
+                    <span id="esh-resume-name">我的简历1</span>
+
+                </span>
+                <i class="material-icons" id="esh-edit-name">edit</i>
+            </div>
+        </header>
+        <main class="mdl-layout__content esh-resume-info" id="esh-content" style="background-color: #f6f6f5;">
+            <div class="mdl-card mdl-card--border">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">求职意向</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                                onclick="window.location.href='jobIntension.html'">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <!--@if($data['intention'] == null)-->
+                    <!--<div class="esh-no-content">-->
+                        <!--您还没有填写过求职意向，点击右上角进行填写-->
+                    <!--</div>-->
+                    <!--@else-->
+                    <div class="esh-resume-info-t">
+                        <label>工作地点</label>
+                        <div>
+                           <!-- @foreach($data['region'] as $region)
+                                @if($data['intention']->region == $region->id)
+                                    {{$region->name}}
+                                    @break
+                                @elseif($data['intention']->region == -1)
+                                    任意
+                                    @break
+                                @endif
+                            @endforeach-->
+                            成都
+                        </div>
+                    </div>
+                    <div class="esh-resume-info-t">
+                        <label>行业分类</label>
+                        <div>
+                            <!--@foreach($data['industry'] as $industry)-->
+                                <!--@if($data['intention']->industry == $industry->id)-->
+                                <!--{{$industry->name}}-->
+                                <!--@break-->
+                                <!--@elseif($data['intention']->industry == -1)-->
+                                <!--任意-->
+                                <!--@break-->
+                                <!--@endif-->
+                            <!--@endforeach-->
+                            电竞门户
+                        </div>
+                    </div>
+                    <div class="esh-resume-info-t">
+                        <label>职业分类</label>
+                        <div>
+                            <!--@foreach($data['occupation'] as $occupation)-->
+                            <!--@if($data['intention']->occupation == $occupation->id)-->
+                            <!--{{$occupation->name}}-->
+                            <!--@break-->
+                            <!--@elseif($data['intention']->occupation == -1)-->
+                            <!--任意-->
+                            <!--@break-->
+                            <!--@endif-->
+                            <!--@endforeach-->
+                            CS
+                        </div>
+                    </div>
+                    <div class="esh-resume-info-t">
+                        <label>工作类型</label>
+                        <div>
+                            <!--@if($data['intention']->work_nature == -1)-->
+                            <!--任意-->
+                            <!--@elseif($data['intention']->work_nature == 0)-->
+                            <!--兼职-->
+                            <!--@elseif($data['intention']->work_nature == 1)-->
+                            <!--实习-->
+                            <!--@elseif($data['intention']->work_nature == 2)-->
+                            <!--全职-->
+                            <!--@endif-->
+                            实习
+                        </div>
+                    </div>
+                    <div class="esh-resume-info-t">
+                        <label>期望薪资</label>
+                        <div>
+                            <!--@if($data['intention']->salary < 0)-->
+                            <!--未指定-->
+                            <!--@else-->
+                            <!--{{$data['intention']->salary}} 元-->
+                            <!--@endif-->
+                            6000-7000
+                        </div>
+                    </div>
+                    <!--@endif-->
+                </div>
+
+            </div>
+            <div class="mdl-card ">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">教育经历</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                                onclick="window.location.href='../components/commonList.html'">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2012-2013</p>
+                            <p class="point">嘉里顿大学</p>
+                            <p class="suptext">软件工程|本科</p>
+                        </div>
+                    </div>
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2013-2014</p>
+                            <p class="point">嘉里顿大学</p>
+                            <p class="suptext">软件工程|硕士</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mdl-card  ">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">工作经历</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                                onclick="window.location.href='../components/commonList.html'">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2013/9/17~2015/12/17</p>
+                            <p class="point">腾讯科技</p>
+                            <p class="suptext">web前端</p>
+                        </div>
+                    </div>
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2015/9/17~2017/12/17</p>
+                            <p class="point">腾讯科技</p>
+                            <p class="suptext">web前端</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-card ">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">项目/赛事经历</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                                onclick="window.location.href='../components/commonList.html'">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2013/9/17开始接触</p>
+                            <p class="point">CSGO</p>
+                            <p class="suptext">无上之首席大师</p>
+                        </div>
+                    </div>
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2013/9/17开始接触</p>
+                            <p class="point">王者荣耀</p>
+                            <p class="suptext">无上之首席大师</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-card ">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">电竞经验</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                                onclick="window.location.href='../components/commonList.html'">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2013/9/17开始接触</p>
+                            <p class="point">CSGO</p>
+                            <p class="suptext">无上之首席大师</p>
+                        </div>
+                    </div>
+                    <div class="esh-tlbox">
+                        <div class="esh-timeline">
+                            <p class="point">2013/9/17开始接触</p>
+                            <p class="point">王者荣耀</p>
+                            <p class="suptext">无上之首席大师</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-card">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">技能特长</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">edit</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="esh-skill">技能1|打死鬼子</div>
+                    <div class="esh-skill">技能1|打死你</div>
+                </div>
+
+            </div>
+            <div class="mdl-card ">
+                <div class="mdl-card__title mdl-card--border">
+                    <h2 class="mdl-card__title-text">附加信息</h2>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">edit</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="esh-skill">我的技能棒棒的</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+    <script src="../../plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="../../js/lib/material.min.js"></script>
+    <script src="../../js/utils/utils.js"></script>
+    <script src="../../js/resume/resumeInfo.js"></script>
+</body>
+</html>

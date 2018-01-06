@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!--@extends('layout.master')
+    @if($data["type"] == 1)
+    @section('title', '个人中心')
+    @endif
+    @if($data["type"] == 2)
+    @section('title', '企业中心')
+    @endif-->
+
+    <!--@section('')
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @endsection-->
+
+   <!-- @section('custom-style')
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/sweetalert/sweetalert.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/mdl/material.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/default/styles.css')}}"/>
+    @endsection-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css"/>
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+    <title>我的</title>
+</head>
+<body>
+<!--@section('header-nav')
+    @if($data['uid'] === 0)
+    @include('components.headerNav', ['isLogged' => false])
+    @else
+    @include('components.headerNav', ['isLogged' => true, 'username' => $data['username']])
+    @endif
+@endsection-->
+
+<!--@section('header-tab')
+    @include('components.headerTab', ['activeIndex' => 2,'type' =>$data['type']])
+@endsection--><!--footer-tab 改-->
+
+<!--@section('content')-->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+        <div class="mdl-layout__header-row esh-layout__header-row">
+            <span class="mdl-layout__title esh-layout__title" id="esh-headline">电竞猎人</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" id="esh-content">
+        <div class="esh-account-info mdl-card">
+           <!-- @if($data["type"] == 1)-->
+            <!--@if($info->photo == null)-->
+            <div class="mdl-card__title">
+                <img src="../../styles/default/images/default-img.png"  class="esh-account-img" id="upload-head--img"/>
+            </div>
+            <!--@else-->
+            <!--<div class="mdl-card__title">-->
+                <!--<img src="{{$info->photo}}" class="esh-account-img" id="upload-head&#45;&#45;img"/>-->
+            <!--</div>-->
+            <!--@endif-->
+            <!--<div class="mdl-card__supporting-text">
+               <span class="esh-text-l">{{$info->pname or "姓名未填写"}}</span>
+                <div>
+                    <span>{{$info->pname or "姓名未填写"}}</span>|
+                    <span>
+                        @if($info->sex == null)
+                            性别未填写
+                        @elseif($info->sex == 1)
+                            男
+                        @elseif($info->sex == 2)
+                            女
+                        @endif
+                    </span>|
+                    <span>{{$info->birthday or "生日未填写"}}</span>
+                </div>
+            </div>-->
+            <div class="mdl-card__supporting-text">
+                <span class="esh-text-l">姓名未填写</span>
+                <div><span>重庆</span>|<span>女</span>|<span>1995/8</span></div>
+            </div>
+            <div class="mdl-card__menu esh-person">
+                <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="accountInfo.html?uid=1">
+                    <i class="material-icons">create</i>
+                </a>
+            </div>
+
+           <!-- @elseif($data["type"] == 2)-->
+           <!-- <div class="mdl-card__title">
+                <img src="../../styles/default/images/default-img.png"  class="esh-account-img" id="upload-head&#45;&#45;img"/>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <span class="esh-text-l">公司名称未填写</span>
+                <div>行业未知|企业类型未知|10~50人</div>
+            </div>
+            <div class="mdl-card__menu esh-company">
+                <a class="mdl-button mdl-button&#45;&#45;icon mdl-js-button mdl-js-ripple-effect" href="accountInfo.html">
+                    <i class="material-icons">create</i>
+                </a>
+            </div>-->
+            <!--@endif-->
+        </div>
+
+        <!--subs -->
+        <div class="esh-subs mdl-list" id="esh-subs">
+            <!--@if($data["type"] == 1)-->
+            <div class="mdl-list__item" onclick="window.location.href='../resume/resume.html?rid=1'">
+                <span class="mdl-list__item-primary-content">
+                  <i class="material-icons mdl-list__item-icon">person</i>
+                  <span>我的简历</span>
+                </span>
+                <span class="mdl-list__item-secondary-action"><i class="material-icons">chevron_right</i></span>
+            </div>
+            <div class="mdl-list__item" id="esh-sub-second" onclick="window.location.href='myApplyRecord.html?arid=1'">
+                <span class="mdl-list__item-primary-content" >
+                  <i class="material-icons mdl-list__item-icon">event_note</i>
+                  <span id="esh-sub-second-title">我的申请记录</span>
+                </span>
+                <span class="mdl-list__item-secondary-action"><i class="material-icons">chevron_right</i></span>
+            </div>
+            <div class="mdl-list__item"  id="esh-sub-third" onclick="window.location.href='myMsg.html?uid=1'">
+                <span class="mdl-list__item-primary-content">
+                  <i class="material-icons mdl-list__item-icon">textsms</i>
+                  <span>我的消息</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <span class="mdl-list__item-secondary-action"><i class="material-icons">chevron_right</i></span>
+                </span>
+            </div>
+            <!--@endif-->
+
+            <!--@if($data["type"] == 2)-->
+            <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  <i class="material-icons mdl-list__item-icon">person</i>
+                  <span>发布的职位</span>
+                </span>
+                <a class="mdl-list__item-secondary-action" href="../position/positionList.html"><i class="material-icons">chevron_right</i></a>
+            </div>
+            <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content" >
+                  <i class="material-icons mdl-list__item-icon">event_note</i>
+                  <span >收到的申请记录</span>
+                </span>
+                <a class="mdl-list__item-secondary-action" href="deliverList.html"><i class="material-icons">chevron_right</i></a>
+            </div>
+            <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  <i class="material-icons mdl-list__item-icon">textsms</i>
+                  <span>我的消息</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <a class="mdl-list__item-secondary-action" href="myMsg.html"><i class="material-icons">chevron_right</i></a>
+                </span>
+            </div>
+            <!--@endif-->
+        </div>
+
+    </main>
+    <footer class="esh-tabs-container" id="esh-footer">
+        <div class="esh-tabs" id="esh-tabs">
+            <a class="esh-tabs__tab" id="esh-tab-home">
+                <i class="material-icons">home</i>
+                <span class="esh-tabs__text">首页</span>
+            </a>
+            <a class="esh-tabs__tab" id="esh-tab-job">
+                <i class="material-icons">view_list</i>
+                <span class="esh-tabs__text">职位</span>
+            </a>
+            <a class="esh-tabs__tab" id="esh-tab-information">
+                <i class="material-icons">sms</i>
+                <span class="esh-tabs__text">资讯</span>
+            </a>
+            <a class="esh-tabs__tab is-active" id="esh-tab-my">
+                <i class="material-icons">person</i>
+                <span class="esh-tabs__text">我的</span>
+            </a>
+        </div>
+    </footer>
+</div>
+<!--@endsection-->  <!--end content-->
+
+
+<script src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script src="../../plugins/sweetalert/sweetalert.min.js"></script>
+<script src="../../js/lib/material.min.js"></script>
+<script src="../../js/utils/utils.js"></script>
+<script src="../../js/my/my.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>已发布的职位</title>
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+
+        <div class="mdl-layout__header-row esh-layout__header-row">
+            <a><i class="material-icons esh-back">chevron_left</i></a>
+            <span class="mdl-layout__title esh-layout__title" id="esh-headline">已发布的职位</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" id="esh-content">
+        <div class="esh-resume mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" onclick="window.location.href='../job/jobView.html?pid=1'">
+                <h3 class="mdl-card__title-text"><i class="material-icons">chevron_right</i>职位名称123</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div>职位描述1234567</div>
+                <div>
+                    浏览次数:<span>8</span>
+                    <span></span>
+                </div>
+                <div>
+                    申请次数:<span>0</span>
+                </div>
+                <div>
+                    发布日期:<span>2017-12-25</span>
+                    <span class="esh-pd-lr-10">失效日期:<span>2018-01-01</span></span>
+                </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    下架
+                </a>
+                <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" href="resumeInfo.html?userid=1">
+                    上线
+                </a>-->
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    刷新
+                </a>
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    删除
+                </a>
+            </div>
+        </div>
+
+        <div class="esh-resume mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" onclick="window.location.href='../job/jobView.html?pid=1'">
+                <h3 class="mdl-card__title-text"><i class="material-icons">assignment</i>职位名称123</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div>职位描述1234567</div>
+                <div>
+                    浏览次数:<span>8</span>
+                    <span></span>
+                </div>
+                <div>
+                    申请次数:<span>0</span>
+                </div>
+                <div>
+                    发布日期:<span>2017-12-25</span>
+                    <span class="esh-pd-lr-10">失效日期:<span>2018-01-01</span></span>
+                </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    下架
+                </a>
+                <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" href="resumeInfo.html?userid=1">
+                    上线
+                </a>-->
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    刷新
+                </a>
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    删除
+                </a>
+            </div>
+        </div>
+        <!--@foreach($data['resumeList'] as $resume)-->
+        <!--<div class="esh-resume mdl-card mdl-shadow&#45;&#45;2dp">-->
+        <!--<span hidden class="resume-id">resume{{$resume->resume_id}}</span>-->
+        <!--<div class="mdl-card__title">-->
+        <!--<h3 class="mdl-card__title-text"><i class="material-icons">assignment</i>{{$resume->resume_name}}</h3>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__supporting-text">-->
+        <!--简历完善度:<span>{{$resume->completion}}</span>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
+        <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" to="/resume/add?rid={{$resume->rid}}">-->
+        <!--编辑-->
+        <!--</a>-->
+        <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" to="/resume/preview?rid={{$resume->rid}}">-->
+        <!--预览-->
+        <!--</a>-->
+        <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" onclick="del('{{$resume->rid}}')">-->
+        <!--删除-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--@endforeach-->
+
+        <!-- @if(count($data['resumeList']) < 3)-->
+        <div class="esh-bottom-option">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"
+                    id="add-position" onclick="window.location.href='addPosition.html'">
+                <i class="material-icons">add</i>
+            </button>发布职位
+        </div>
+        <!--@endif-->
+    </main>
+</div>
+
+
+<script src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script src="../../js/lib/material.min.js"></script>
+<script src="../../js/utils/utils.js"></script>
+
+</body>
+</html>

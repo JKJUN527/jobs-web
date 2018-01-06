@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css"/>
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+    <title>找回密码</title>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout esh-no-login">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+        <div class="mdl-layout-icon esh-layout-icon--left esh-page--back esh-js-page--back"><i class="material-icons">navigate_before</i></div>
+        <div class="mdl-layout__header-row esh-layout__header-row esh-layout__header-row--has-button">
+            <span class="mdl-layout__title esh-layout__title">重置密码方式</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" id="esh-content">
+        <div class="mdl-card">
+            <div class="mdl-card__supporting-text">
+                选择重置密码的方式
+            </div>
+            <div class="mdl-card__actions">
+                <div class="esh-reg-way">
+                    <a href="#" class=" esh-reg-phone esh-active">通过手机找回</a>
+                    <a href="#" class="esh-reg-mail ">通过邮箱找回</a>
+                </div>
+                <form id="esh-reg-phone" >
+                    <span id="errorMsg" class="error-msg"></span>
+                    <div class="esh-form-group">
+                        <div class="esh-form-input">
+                            <input type="text" id="account" placeholder="请输入手机号或邮箱号…"/>
+                        </div >
+                        <div class="esh-form-input esh-form-verify esh-last">
+                            <input type="password" class="" placeholder="请输入验证码…" id="verifyCode"/>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                发送验证码</button>
+                        </div>
+                    </div>
+                    <div class="esh-form-footer">
+                        <div class="esh-form-sure">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    onclick="window.location.href='resetPwd.html'">下一步</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

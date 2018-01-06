@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../plugins/select2/css/select2.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+    <title>求职意向</title>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+        <div class="mdl-layout-icon esh-layout-icon--left esh-page--back esh-js-page--back"><i class="material-icons">navigate_before</i></div>
+        <div class="mdl-layout__header-row esh-layout__header-row esh-layout__header-row--has-button">
+            <span class="mdl-layout__title esh-layout__title">求职意向</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" id="esh-content">
+        <form id="esh-job-intention">
+            <input type="hidden" name="rid" value="1"/>
+            <div class="esh-edit">
+                <label class="esh-label">
+                    <em>*</em>地点
+                </label>
+                <div class="esh-select">
+                    <!--{{$region->name}}-->
+                    <!--<span class="esh-sval"></span>-->
+                    <select class="esh-select-option esh-select2" name="place">
+                        <!--@if($data['intention'] == null)
+                        <option value="-1">任意</option>
+                        @foreach($data['region'] as $region)
+                        <option value="{{$region->id}}">{{$region->name}}</option>
+                        @endforeach
+                        @else
+                        @if($data['intention']->region == -1)
+                        <option value="-1" selected>任意</option>
+                        @else
+                        <option value="-1">任意</option>
+                        @endif
+                        @foreach($data['region'] as $region)
+                        @if($data['intention']->region == $region->id)
+                        <option value="{{$region->id}}" selected>{{$region->name}}</option>
+                        @else
+                        <option value="{{$region->id}}">{{$region->name}}</option>
+                        @endif
+                        @endforeach-->
+                        <option>成都</option>
+                        <option selected>重庆</option>
+                        <option>上海</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="esh-edit">
+                <label class="esh-label">
+                    <em>*</em>行业
+                </label>
+                <div class="esh-select">
+                    <!--<span class="esh-sval"></span>-->
+                    <select class="esh-select-option esh-select2" name="industry">
+                        <option>任意</option>
+                        <option selected>俱乐部</option>
+                        <option>赛事方</option>
+                    </select>
+                </div>
+            </div>
+            <!--if 行业为任意，不显示-->
+            <div class="esh-edit">
+                <label class="esh-label">
+                    <em>*</em>游戏
+                </label>
+                <div class="esh-select">
+                    <!--<span class="esh-sval"></span>-->
+                    <select class="esh-select-option esh-select2" name="occupation">
+                        <option>绝地求生</option>
+                        <option selected>刀塔</option>
+                        <option>穿越火线</option>
+                    </select>
+                </div>
+            </div>
+            <div class="esh-edit">
+                <label class="esh-label">
+                    <em>*</em>类型
+                </label>
+                <div class="esh-select">
+                    <!--<span class="esh-sval"></span>-->
+                    <select class="esh-select-option esh-select2" name="type">
+                        <!-- @if($data['intention'] == null)
+                         <option value="-1">任意</option>
+                         <option value="0">兼职</option>
+                         <option value="1">实习</option>
+                         <option value="2">全职</option>
+                         @else
+                         <option value="-1" {{$data['intention']->work_nature==-1?"selected":""}}>任意</option>
+                         <option value="0" {{$data['intention']->work_nature==0?"selected":""}}>兼职</option>
+                         <option value="1" {{$data['intention']->work_nature==1?"selected":""}}>实习</option>
+                         <option value="2" {{$data['intention']->work_nature==2?"selected":""}}>全职</option>
+                         @endif-->
+                        <option value="-1">任意</option>
+                        <option value="0">兼职</option>
+                        <option value="1">实习</option>
+                        <option value="2">全职</option>
+                    </select>
+                </div>
+            </div>
+            <div class="esh-edit">
+                <label class="esh-label">
+                    <em>*</em>期望薪资（月）
+                </label>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="esh-salary">
+                    <input class="mdl-textfield__input" type="text" pattern="^([1-9]\d+)|[2-9]$"
+                           esh-error-msg="请输入大于0的整数" name="salary">
+                    <span class="mdl-textfield__error"></span>
+                </div>
+            </div>
+
+            <div class="esh-edit-fb">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                        type="button" id="esh-save-jobintention">
+                    保存
+                </button>
+            </div>
+        </form>
+
+    </main>
+</div>
+<script src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../plugins/jquery-validation/jquery.validate.method.js"></script>
+<script src="../../js/lib/material.min.js"></script>
+<script src="../../plugins/select2/js/select2.min.js"></script>
+<script src="../../js/utils/utils.js"></script>
+<script src="../../js/resume/jobIntension.js"></script>
+</body>
+</html>

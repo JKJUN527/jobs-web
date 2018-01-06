@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+    <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css">
+    <title>新闻详情</title>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+        <div class="mdl-layout-icon esh-layout-icon--left"><i class="material-icons">navigate_before</i></div>
+        <div class="mdl-layout__header-row esh-layout__header-row">
+            <span class="mdl-layout__title esh-layout__title" id="esh-headline">资讯详情</span>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="mdl-card mdl-shadow--2dp esh-info-card esh-news-detail">
+                <!--title-->
+                <div class="mdl-card__title ">
+                    <h5 class="mdl-card__title-text esh-news-title" data-content="">
+                        title
+                    </h5>
+                </div>
+                <!--panel-->
+                <div class="mdl-card__actions mdl-card--border base-info--panel">
+                    <label><span>责任编辑: admin</span></label>
+                    <label><span>发布时间: 2017-12-25</span></label>
+                    <label><i class="material-icons">comment</i> <span>5</span></label>
+                </div>
+                <!--content-->
+                <div class="mdl-card__supporting-text ">
+
+                </div>
+            </div>
+
+            <div class="comment-panel">
+                <div class="mdl-card esh-info-card esh-comment-card">
+                    <form id="comment-form" method="post">
+                        <input type="hidden" name="nid" value="{{$data['news']->nid}}"/>
+                        <div class="esh-form-group">
+                            <div class="form-line">
+                                    <textarea rows="4" class="form-control" name="content"
+                                              id="additional-content"
+                                              placeholder="说点什么..."></textarea>
+                            </div>
+                            <div class="esh-help-info" id="comment-help">还可输入114字</div>
+                            <label class="error" for="additional-content"></label>
+                        </div>
+
+                        <button id="btn-comment" type="submit"
+                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky">
+                            评论
+                        </button>
+                    </form>
+
+                </div>
+
+                <h5>评论列表</h5>
+
+                <div class="mdl-card__actions mdl-card--border comment-list--panel">
+                    <div class="esh-comment-item">
+                        <img src="http://eshunter.com/images/default-img.png" class="esh-header-img" width="48" height="48"/>
+                        <div class="esh-comment-content">
+                            <p><b>周杰伦: </b>&nbsp;&nbsp;我喜欢蔡依林</p>
+                            <span>forever</span>
+                        </div>
+                    </div>
+                </div>
+                <!--@if(sizeof($data['review']) === 0)-->
+                <!--<p>暂无评论</p>-->
+                <!--@else-->
+                <!--@foreach($data['review'] as $comment)-->
+                <!--<div class="comment-item">-->
+                <!--@if($comment->photo == null || $comment->photo == "")-->
+                <!--<img src="{{asset('images/default-img.png')}}" class="head-img" width="48"-->
+                <!--height="48"/>-->
+                <!--@else-->
+                <!--@if($comment->type == 1)-->
+                <!--<img src="{{$comment->photo}}" class="head-img" width="48" height="48"/>-->
+                <!--@else-->
+                <!--<img src="{{$comment->elogo}}" class="head-img" width="48" height="48"/>-->
+                <!--@endif-->
+                <!--@endif-->
+
+                <!--<div class="comment-content">-->
+                <!--<p><b>{{$comment->username}}: </b>&nbsp;&nbsp;{{$comment->content}}</p>-->
+                <!--<span>{{$comment->created_at}}</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--@endforeach-->
+                <!--@endif-->
+            </div>
+
+
+    </main>
+
+
+</div>
+
+<script src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script src="../../js/lib/material.min.js"></script>
+<script src="../../js/utils/utils.js"></script>
+<script src="../../js/information/infoDetail.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/mdl/material.min.css">
+    <link rel="stylesheet" href="../../styles/default/styles.css">
+    <title>我的消息</title>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header esh-layout">
+    <header class="mdl-layout__header mdl-layout__header--seamed" id="esh-header">
+        <div class="mdl-layout__header-row esh-layout__header-row">
+            <a><i class="material-icons esh-back">chevron_left</i></a>
+            <span class="mdl-layout__title esh-layout__title" id="esh-headline">我的消息</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" id="esh-content">
+        <div class="esh-right-wrapper">
+            <!-- Right aligned menu below button -->
+            <button id="demo-menu-lower-right"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="demo-menu-lower-right">
+                <li class="mdl-menu__item"><i class="material-icons">delete_sweep</i>删除</li>
+                <li class="mdl-menu__item"><i class="material-icons">done_all</i>标为已读</li>
+                <li class="mdl-menu__item"><i class="material-icons">select_all</i>选择所有</li>
+            </ul>
+        </div>
+        <ul class="esh-msg mdl-list esh-media-list" id="esh-primary-list">
+            <li class="mdl-list__item mdl-list__item--three-line esh-list__item" >
+                <img class="esh-list__item-image" src="../../styles/default/images/avatar.png" onclick="window.location.href='chartList.html'"/>
+                <div class="mdl-list__item-primary-content esh-list__item-primary-content" onclick="window.location.href='chartList.html'">
+                    <span class="esh-list_item-title">浙江文鑫阳信息科技有限公司</span>
+                    <span class="mdl-list__item-text-body esh-list__item-text-body">
+                        <span class="esh-list__item-text">sdjfskldfjskldjfksldjfklsdjfklsjdkfljsdklfjsdklfjskldfjskldfjskldfj</span>
+                         <span class="esh-list__item-text">2017-9-17</span>
+                    </span>
+                </div>
+                <div class="mdl-list__item-secondary-content esh-list__item-secondary-content">
+                    <input type="checkbox" />
+                </div>
+            </li>
+        </ul>
+
+
+    </main>
+</div>
+<script src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script src="../../js/lib/material.min.js"></script>
+<script src="../../js/utils/utils.js"></script>
+</body>
+</html>
