@@ -225,6 +225,12 @@ Route::any('getAllApplyList', ['uses' => 'PersonCenterController@getAllApplyList
 Route::any('addtempUser', ['uses' => 'CreatetempuserController@index']);
 Route::any('resumesendmail', ['uses' => 'DeliveredController@sendresumetomail']);
 
+
+
+//mobile routes
+//index page
+Route::any('/m/index', ['uses' => 'mobile\HomeController@index']);//完成
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

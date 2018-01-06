@@ -43,15 +43,22 @@
             </div>
 
             <ul class="mdl-list esh-media-list esh-media-list--text mdl-color--white" id="esh-info-primary-list">
-
+                @foreach($data['position']['position'] as $position)
                 <li class="mdl-list__item mdl-list__item--three-line esh-list__item esh-list__item--two-line">
                     <div class="mdl-list__item-primary-content esh-list__item-primary-content">
-                        <span class="esh-list_item-title"> 急聘: 游戏运营 </span>
+                        <span class="esh-list_item-title"> {{$data['username']['username']}}急聘: {{$position->title}} </span>
                         <span class="mdl-list__item-text-body esh-list__item-text-body">
-                    <span class="esh-list__item-secondary-info">上海快屏网络科技有限公司</span>
+                    <span class="esh-list__item-secondary-info">
+                        @if(empty($position->byname))
+                            {{mb_substr($position->ename, 0, 14, 'utf-8')}}
+                        @else
+                            {{mb_substr($position->byname, 0, 14, 'utf-8')}}
+                        @endif
+                    </span>
                 </span>
                     </div>
                 </li>
+                @endforeach
 
                 <li class="mdl-list__item mdl-list__item--three-line esh-list__item esh-list__item--two-line">
                     <div class="mdl-list__item-primary-content esh-list__item-primary-content">
