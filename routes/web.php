@@ -231,6 +231,13 @@ Route::any('resumesendmail', ['uses' => 'DeliveredController@sendresumetomail'])
 //index page
 Route::any('/m/index', ['uses' => 'mobile\HomeController@index']);//完成
 
+//个人信息
+Route::get('account/edit', ['uses' => 'mobile\InfoController@index']);
+
+//职位
+Route::any('position/advanceSearch', ['uses' => 'mobile\PositionController@advanceIndex']);
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

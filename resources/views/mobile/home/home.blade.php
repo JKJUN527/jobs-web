@@ -108,7 +108,7 @@
 
 <script src="{{asset('mobile/js/lib/jquery-3.2.1.min.js')}}"></script>
 <script src="{{asset('mobile/js/lib/material.min.js')}}"></script>
-<script src="{{asset('mobile/js/utils/utis.js')}}"></script>
+<script src="{{asset('mobile/js/utils/utils.js')}}"></script>
 <script src="{{asset('mobile/js/home/home.js')}}"></script>
 </body>
 </html>
